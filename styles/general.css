@@ -1,0 +1,105 @@
+/*
+---01 TYPOGRAPHY SYSTEM
+  
+- font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- font weights
+default: 400
+
+- line height
+default: 1
+
+
+
+--- 02 COLORS
+
+pallete 01
+#1A1423
+#B75D69
+#EACDC2
+#774C60
+#372549
+
+### Pallete 02
+
+#2D2D34
+#B97375
+#F1E4E8
+#E2DCDE
+#CEB1BE
+
+- Primary: 
+- Tints: 
+- Shades: 
+- Accents:
+- Greys: #555
+
+
+--- 05 SHADOWS
+
+
+--- 06 BORDER RADIUS
+
+
+--- 07 WHITESPACE
+
+- Spacing System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+:root {
+  --color-background: #0d0f12;
+  --color-text: #e3e6e8;
+  /* --colors-all--white: #fafafa;
+  --colors-all--black: #111; */
+
+  /* --font-primary: "Rubik", sans-serif; */
+  --font-primary: "Mulish", sans-serif;
+  --font-cursive: "Cedarville Cursive", "Brush Script MT", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  padding: 0 4.8rem;
+}
+
+.grid--3-cols-121 {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.link:link,
+.link:visited {
+  /* text-transform: uppercase; */
+  letter-spacing: 0.05rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-text);
+}

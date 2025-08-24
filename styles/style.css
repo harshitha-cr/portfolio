@@ -1,0 +1,56 @@
+.header-spacer {
+  /* height: 2.4rem; */
+}
+
+.header {
+  width: 100%;
+  height: 6.4rem;
+  border-bottom: 1px solid var(--color-text);
+  /* display: flex;
+  align-items: center; */
+  /* this will collapse, hence we should allow the child to grow (flex grow: 1 inside .flex-header) */
+}
+
+.flex-header {
+  /* cant beleive this shit vertically centered stuff in header */
+  height: 100%;
+  /* flex: 1; */
+  display: flex;
+  gap: 9.6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav-list,
+.side-action-list {
+  list-style: none;
+
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.side-action {
+  margin-left: auto;
+}
+
+.main-logo-text {
+  /* font-family: Borel, sans-serif; */
+  font-family: var(--font-cursive);
+  font-size: 2.4rem;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1;
+  /* overflow: hidden; */
+  /* transform: translateY(4px); */
+}
+
+.main-logo-link {
+  padding: 1.2rem;
+}
+
+/* 
+----------------------------------------
+HERO SECTION
+----------------------------------------
+*/
