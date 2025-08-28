@@ -57,6 +57,7 @@ pallete 01
   /* --color-accent01: #b97375; */
 
   --color-bg-shade: #3d3f41;
+  --color-bg: #191919;
 
   --colors-all--white: #fafafa;
   /* --colors-all--black: #111; */
@@ -90,7 +91,7 @@ main {
   position: relative;
   min-height: 80vh;
   /* padding: 2rem; */
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1;
 }
 

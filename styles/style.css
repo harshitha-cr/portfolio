@@ -1,6 +1,6 @@
-.header-spacer {
-  /* height: 2.4rem; */
-}
+/* .header-spacer {
+  height: 2.4rem;
+} */
 
 .header {
   width: 100%;
@@ -9,6 +9,19 @@
   /* display: flex;
   align-items: center; */
   /* this will collapse, hence we should allow the child to grow (flex grow: 1 inside .flex-header) */
+
+  position: sticky; /* stays at top always */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.4rem;
+  z-index: 1000;
+
+  /* background: rgba(0, 0, 0, 0.4); */
+  backdrop-filter: blur(42px);
+  -webkit-backdrop-filter: blur(42px);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  transition: all 0.3s;
 }
 
 .flex-header {
@@ -160,3 +173,9 @@ FOOTER SECTION
 .cursive-text--small {
   font-size: 2.4rem;
 }
+
+/* 
+----------------------------------------
+PROJECTS SECTION
+----------------------------------------
+*/
