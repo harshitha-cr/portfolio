@@ -54,6 +54,8 @@ pallete 01
   --color-text-primary: #d6d6d6;
   --color-text-shade: #888888;
   --color-accent01: #b75d69;
+  --color-accent02: #774c60;
+
   /* --color-accent01: #b97375; */
 
   --color-bg-shade: #3d3f41;
@@ -126,7 +128,7 @@ main::before {
 }
 
 .container--narrow {
-  max-width: 110rem;
+  max-width: 100rem;
   margin: 0 auto;
   padding: 0 3.2rem;
 }

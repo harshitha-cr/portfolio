@@ -11,15 +11,23 @@ PROJECTS SECTION
 
 /* heading of every page */
 .heading-secondary {
-  text-transform: uppercase;
   font-size: 3.2rem;
   font-weight: 400;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
   color: var(--color-text-primary);
-  letter-spacing: 0.2px;
 }
 
 .margin-bottom-big {
   margin-bottom: 4.8rem;
+}
+
+.margin-bottom-mid {
+  margin-bottom: 2.4rem;
+}
+
+.margin-bottom-small {
+  margin-bottom: 1.6rem;
 }
 
 .text-align-c {
@@ -33,6 +41,10 @@ PROJECTS SECTION
   font-weight: 500;
 }
 
+/* 
+CARDS SECTION
+*/
+
 .grid-proj-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -40,49 +52,92 @@ PROJECTS SECTION
 }
 
 .card {
-  position: relative;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+
   /* background: var(--color-background); */
   background: var(--color-bg);
   border-radius: 11px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* box-shadow: inset 0 4px 12px rgba(71, 71, 71, 0.1); */
+  box-shadow: inset 0 0 0 1px #535353;
 
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 1.6rem;
 
   /* overflow: hidden;
   transition: transform 0.2s ease; */
 }
-/* 
-.card::before {
+
+.card-img {
+  /* width: 50rem; */
+}
+
+.card-content {
+  position: relative;
+  color: var(--color-text-primary);
+  letter-spacing: 0.75px;
+  z-index: 1;
+  padding: 0 1.6rem;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  height: 100%;
+}
+
+.card-content::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(to right, #d1d5db 1px, transparent 1px),
-    linear-gradient(to bottom, #d1d5db 1px, transparent 1px);
-  background-size: 32px 32px;
+  z-index: -1;
+  /* top: -1.6rem; */
+  background-image: linear-gradient(
+      to right,
+      var(--grid-color) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px; /* <-- controls spacing (X Y) */
   -webkit-mask-image: radial-gradient(
-    ellipse 80% 80% at 0% 0%,
+    ellipse 80% 80% at 100% 0%,
     #000 50%,
     transparent 90%
   );
   mask-image: radial-gradient(
-    ellipse 80% 80% at 0% 0%,
+    ellipse 80% 80% at 100% 0%,
     #000 50%,
     transparent 90%
   );
-  z-index: 0;
-} */
+}
 
-.card-content {
-  /* position: relative; */
-  color: var(--color-text-primary);
-  font-size: 1.4rem;
-  line-height: 1.4;
+.card-heading {
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 1.6;
   letter-spacing: 0.5px;
-  z-index: 1;
-  padding: 1rem;
+}
+
+.card-text {
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.tech-stack-list {
+  margin-bottom: 1.6rem;
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  gap: 0.5rem;
+}
+
+.tech-stack-list-item {
+  padding: 0.8rem 1.2rem;
+  border-radius: 100px;
+  background-color: var(--grid-color);
+}
+
+.tech-stack-list-item span {
+  font-size: 1.2rem;
 }
