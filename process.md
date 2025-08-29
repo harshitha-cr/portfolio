@@ -46,3 +46,7 @@ Instead, make the .flex-header the flex container (it already is!) and just ensu
 ```
 
 This way .header stays a simple block, .container.flex-header handles both max-width and flex alignment, and nothing collapses.
+
+## Icon Pack
+
+devicons or Simpleicons

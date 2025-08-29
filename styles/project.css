@@ -10,13 +10,61 @@ PROJECTS SECTION
 }
 
 /* heading of every page */
-.heading-secondary {
+/* .heading-secondary {
   font-size: 3.2rem;
   font-weight: 400;
   letter-spacing: -0.5px;
   text-transform: uppercase;
   color: var(--color-text-primary);
+
+  position: relative;
+} */
+
+/* ----------section header with side vertical lines----------- */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* margin: 40px 0; */
 }
+
+.section-title--big {
+  font-size: 2.4rem;
+}
+
+.section-title--mid {
+  font-size: 1.8rem;
+}
+
+.section-title span {
+  position: relative;
+  padding: 0 20px;
+}
+
+.section-title span::before,
+.section-title span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 4rem; /* Adjust length of line */
+  height: 1px;
+  background-color: var(--color-text-shade02); /* Match your design */
+}
+
+.section-title span::before {
+  left: -4rem; /* Adjust spacing */
+}
+
+.section-title span::after {
+  right: -4rem; /* Adjust spacing */
+}
+
+/* ------------- */
 
 .margin-bottom-big {
   margin-bottom: 4.8rem;
@@ -125,19 +173,19 @@ CARDS SECTION
   line-height: 1.6;
 }
 
-.tech-stack-list {
+.lang-list {
   margin-bottom: 1.6rem;
   list-style: none;
   display: flex;
   gap: 0.5rem;
 }
 
-.tech-stack-list-item {
+.lang-list-item {
   padding: 0.8rem 1.2rem;
   border-radius: 100px;
   background-color: var(--grid-color);
 }
 
-.tech-stack-list-item span {
+.lang-list-item span {
   font-size: 1.2rem;
 }
