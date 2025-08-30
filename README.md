@@ -14,3 +14,6 @@ Designed with a clean layout, smooth navigation, and subtle interactivity to mak
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Deployment:** Netlify
+
+## 🔗 Live Demo
+👉 [View Portfolio](https://harshithacr-portfolio.netlify.app/)
