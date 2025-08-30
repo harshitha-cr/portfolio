@@ -21,13 +21,6 @@ pallete 01
 #774C60
 #372549
 
-### Pallete 02
-
-#2D2D34
-#B97375
-#F1E4E8
-#E2DCDE
-#CEB1BE
 
 - Primary: 
 - Tints: 
@@ -50,24 +43,46 @@ pallete 01
 */
 
 :root {
-  --color-background: #0d0f12;
-  --color-text-primary: #d6d6d6;
-  --color-text-shade: #888888;
-  --color-text-shade02: #555555;
+  --color-background: #141414;
+  --color-background-l-op: #141414e0;
+
   --color-accent01: #b75d69;
-  --color-accent02: #774c60;
 
-  --color-bg-shade: #3d3f41;
-  --color-bg: #191919;
+  --color-text-primary: #d6d6d6;
+  --color-text-tint01: #aaa;
+  /* --color-text-tint02: #555555; */
 
-  --colors-all--white: #fafafa;
-  /* --colors-all--black: #111; */
+  --color-bg-shade: #282828;
+  --color-bg: #1a1a1a;
 
-  /* --font-primary: "Rubik", sans-serif; */
+  --color-text-brightest: #fafafa;
+  --color-text-all-white: #fafafa;
+
+  --grid-color: #fefefe1a;
+
   --font-primary: "Mulish", sans-serif;
   --font-cursive: "Cedarville Cursive", "Brush Script MT", cursive;
+}
 
-  --grid-color: #ffffff1a;
+[data-theme="light"] {
+  /* --color-background: #e7e7e7; */
+  /* --color-text-primary: #151515; */
+
+  --color-background: #e4e4e4;
+  --color-background-l-op: #e4e4e4e0;
+
+  --color-accent01: #b75d69;
+
+  --color-text-primary: #1f1f1f;
+  --color-text-tint01: #494949;
+  /* --color-text-tint01: #555555; */
+
+  --color-bg-shade: #c8c8c8;
+  --color-bg: #e0e0e0;
+
+  --color-text-brightest: #1a1a1a;
+
+  --grid-color: #0101011a;
 }
 
 * {
@@ -83,10 +98,26 @@ html {
 body {
   font-family: var(--font-primary);
   line-height: 1;
-  font-weight: 400;
+  letter-spacing: 0.25px;
+  font-weight: 500;
   color: var(--color-text);
   background-color: var(--color-background);
 }
+
+/* transition of fadein fadeout */
+body {
+  opacity: 1;
+  transition: opacity 0.02s ease;
+}
+
+body.page-loaded {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+/* ---- */
 
 main {
   position: relative;
@@ -121,13 +152,13 @@ main::before {
 }
 
 .container {
-  max-width: 120rem;
+  max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
 }
 
 .container--narrow {
-  max-width: 100rem;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 0 3.2rem;
 }
@@ -140,7 +171,7 @@ main::before {
 /* NOT reusable anymore */
 .grid--2-cols {
   /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr 0.7fr;
 }
 
 .grid--3-cols-121 {
@@ -166,16 +197,17 @@ main::before {
   letter-spacing: 0.05rem;
   display: inline-block;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   color: var(--color-text-primary);
+  color: var(--color-text-tint01);
   transition: all 0.3s ease;
 }
 
 .link:hover,
 .link:active {
   color: var(--color-accent01);
-  font-weight: 800;
+  font-weight: 1000;
 }
 
 .cta-basic:link,
@@ -187,7 +219,7 @@ main::before {
 .cta-basic:hover,
 .cta-basic:active {
   background-color: var(--color-bg-shade);
-  color: var(--colors-all--white);
+  color: var(--color-text-brightest);
 }
 
 .cta-adv:link,
@@ -196,10 +228,62 @@ main::before {
   padding: 1.2rem 1.8rem;
   background-color: var(--color-bg-shade);
   border-radius: 100px;
+  color: var(--color-text-brightest);
 }
 
 .cta-adv:hover,
 .cta-adv:active {
-  color: var(--color-text-primary);
   background-color: var(--color-accent01);
+  color: var(--color-text-all-white);
+}
+
+/* 
+----------------------------------------
+HELPER CLASSES
+----------------------------------------
+*/
+
+.margin-bottom-big {
+  margin-bottom: 4.8rem;
+}
+
+.margin-bottom-mid {
+  margin-bottom: 2.4rem;
+}
+
+.margin-bottom-small {
+  margin-bottom: 1.6rem;
+}
+
+.text-align-c {
+  text-align: center;
+}
+
+/* img pop for light mode*/
+
+.img-wrap {
+  display: inline-block; /* or block/flex as you need */
+  position: relative;
+  overflow: visible;
+  will-change: transform, filter;
+}
+
+.img-wrap.pop img {
+  display: block;
+  max-width: 80%;
+  justify-self: center;
+  transition: transform 220ms ease, filter 220ms ease, box-shadow 220ms ease;
+  /* increase contrast/saturation and a tiny brightness tweak */
+  filter: contrast(1.16) saturate(1.15) brightness(0.99);
+  transform: translateZ(0);
+  /* soft drop-shadow for separation from page */
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.18)) contrast(1.12)
+    saturate(1.12);
+}
+
+/* optional hover microinteraction */
+.img-wrap.pop:hover img {
+  transform: translateY(-6px) scale(1.02);
+  filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.22)) contrast(1.18)
+    saturate(1.2);
 }

@@ -17,11 +17,15 @@
   height: 6.4rem;
   z-index: 1000;
 
-  /* background: rgba(0, 0, 0, 0.4); */
-  backdrop-filter: blur(42px);
-  -webkit-backdrop-filter: blur(42px);
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
-  transition: all 0.3s;
+  background: var(--color-background-l-op);
+
+  /* blur effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.08); */
+
+  transition: background 0.3s ease, border 0.3s ease;
 }
 
 .flex-header {
@@ -33,6 +37,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+/* .hero-text-wrap {
+  justify-self: center;
+} */
 
 .main-nav-list,
 .side-action-list {
@@ -60,12 +68,14 @@
 
 .main-logo-link {
   padding: 1.2rem;
+  color: var(--color-text-primary) !important;
 }
 
 .main-logo-link:hover,
 .main-logo-link:active {
-  color: var(--color-text-primary) !important;
+  color: var(--color-accent01) !important;
 }
+
 /* 
 ----------------------------------------
 HERO SECTION
@@ -82,10 +92,10 @@ HERO SECTION
 }
 
 .primary-heading {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.8;
-  color: var(--color-text-shade);
+  color: var(--color-text-tint01);
 }
 
 .cursive-text {
@@ -105,7 +115,7 @@ HERO SECTION
 }
 
 .hero-texts-list-el {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 500;
   display: flex;
   gap: 0.5rem;
@@ -162,6 +172,12 @@ FOOTER SECTION
   stroke: currentColor;
 }
 
+.icon--big {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke: currentColor;
+}
+
 .icon-right-arrow {
   width: 1.4rem;
   height: 1.4rem;
@@ -173,15 +189,23 @@ FOOTER SECTION
 }
 
 .footer-text-box p {
-  letter-spacing: 1.2px;
+  letter-spacing: 0.75px;
 }
 
 .cursive-text--small {
   font-size: 2.4rem;
 }
 
-/* 
-----------------------------------------
-PROJECTS SECTION
-----------------------------------------
-*/
+#theme-toggle {
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  color: var(--color-text-tint01);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}

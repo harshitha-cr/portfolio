@@ -6,6 +6,7 @@ ABOUT SECTION
 .section-about {
   padding: 4.8rem 0;
   color: var(--color-text-primary);
+  /* min-height: 80vh; */
 }
 
 .test {
@@ -41,45 +42,41 @@ ABOUT SECTION
   /* flex-direction: column; */
   gap: 1.2rem;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 /* ----------- each pack of language---------- */
 
 .tech-stack {
   display: flex;
-  /* flex-wrap: wrap; */
-  gap: 12px; /* spacing between items */
+  flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
 .tech-stack-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: #242424;
+  gap: 0.8rem;
+  background: var(--color-bg-shade);
   color: var(--color-text-primary);
-  letter-spacing: 0.75px;
+  letter-spacing: 0.5px;
 
-  font-size: 14px;
-  padding: 6px 14px;
+  font-size: 1.4rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 6px;
   transition: background 0.2s ease;
 
   width: fit-content;
 }
 
-.tech-stack-item:hover {
-  background: #3d3d3d; /* lighter on hover */
-}
-
 .icon-tech {
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
   fill: currentColor; /* matches text color */
 }
 
 .tech-stack-item a {
   line-height: 1;
-  /* font-size: 1.6rem; */
   color: var(--color-text-primary);
   text-decoration: none;
 }

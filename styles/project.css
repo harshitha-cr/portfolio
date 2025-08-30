@@ -9,18 +9,7 @@ PROJECTS SECTION
   color: var(--color-text-primary);
 }
 
-/* heading of every page */
-/* .heading-secondary {
-  font-size: 3.2rem;
-  font-weight: 400;
-  letter-spacing: -0.5px;
-  text-transform: uppercase;
-  color: var(--color-text-primary);
-
-  position: relative;
-} */
-
-/* ----------section header with side vertical lines----------- */
+/* ----------vertical lines----------- */
 
 .section-title {
   display: flex;
@@ -30,6 +19,7 @@ PROJECTS SECTION
   font-family: var(--font-primary);
   letter-spacing: 2px;
   text-transform: uppercase;
+
   /* margin: 40px 0; */
 }
 
@@ -43,7 +33,7 @@ PROJECTS SECTION
 
 .section-title span {
   position: relative;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 .section-title span::before,
@@ -53,7 +43,7 @@ PROJECTS SECTION
   top: 50%;
   width: 4rem; /* Adjust length of line */
   height: 1px;
-  background-color: var(--color-text-shade02); /* Match your design */
+  background-color: var(--color-text-tint01); /* Match your design */
 }
 
 .section-title span::before {
@@ -65,22 +55,6 @@ PROJECTS SECTION
 }
 
 /* ------------- */
-
-.margin-bottom-big {
-  margin-bottom: 4.8rem;
-}
-
-.margin-bottom-mid {
-  margin-bottom: 2.4rem;
-}
-
-.margin-bottom-small {
-  margin-bottom: 1.6rem;
-}
-
-.text-align-c {
-  text-align: center;
-}
 
 .heading-text {
   letter-spacing: 0.5px;
@@ -118,9 +92,9 @@ CARDS SECTION
   transition: transform 0.2s ease; */
 }
 
-.card-img {
-  /* width: 50rem; */
-}
+/* .card-img {
+  width: 50rem;
+} */
 
 .card-content {
   position: relative;
@@ -169,7 +143,7 @@ CARDS SECTION
 
 .card-text {
   margin-bottom: 1.6rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.6;
 }
 
@@ -177,6 +151,7 @@ CARDS SECTION
   margin-bottom: 1.6rem;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
